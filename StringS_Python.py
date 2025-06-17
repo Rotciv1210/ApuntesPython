@@ -74,3 +74,25 @@ print("----------------")
 #Entrecomillar caracteres
 texto= "We are the so-called \"Vikings\" from the north."
 print(texto)
+print("----------------")
+
+#Para borrar el whiteSpace (el espacio en blanco antes de comenzar una frase)
+a = " Hola Mundo!"
+print(a.strip())
+
+#Para reemplazar el texto
+a = "Hola Mundo!"
+print(a.replace("H", "W"))
+print("----------------")
+
+#El metodo split() devuelve una lista donde el texto entre lo especificado en los argumentos se convierte en una lista 
+a = "Hola, Mundo!"
+print(a.split(","))
+print("----------------")
+
+#CONCATENACION DE STRING
+a = "Hola"
+b = "Mundo"
+c = a+b 
+print(c)
+
