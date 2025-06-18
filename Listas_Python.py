@@ -117,3 +117,60 @@ print("--------------")
 
 #Otra forma de hacer un bucle for con lista
 [print(x) for x in lista10]
+print("--------------")
+
+#Comprension de listas
+#Con una lista base, permite crear una lista basada en la anterior
+frutas = ["Manzana", "Platano", "Cereza", "Kiwi", "mango"]
+frutas_Nuevas = []
+
+for x in frutas: 
+    if "a" in x: 
+        frutas_Nuevas.append(x) #Inserta en la nueva lista todas las frutas que contengan la vocal a
+print(frutas_Nuevas)
+print("--------------")
+#Otra sintaxis --> frutas_Nuevas = [x for x in frutas if "a" in x] // nombreLista = [expresion for item in iterador if condicion == true]
+
+#Meter frutas que no sean la manzana
+frutas_NoManzana = [x for x in frutas if x != "Manzana"]
+print(frutas_NoManzana)
+print("--------------")
+
+#Clasificar listas --> sort()
+frutas.sort() #Las ordena alfanumericamente en forma ascendente. Para ordenarlos descendentemente --> frutas.sort(reverse = True)
+print(frutas)
+
+#Por defecto el metodo es case sensitive
+frutas.sort(key = str.lower) #Para que no sea case sensitive
+print("--------------")
+#Ordenarlas aleatoriamente
+frutas.reverse()
+print(frutas)
+print("--------------")
+
+#Copiar listas
+#3 Maneras. 1--> lista.copy(). 2--> miLista = list(lista). 3--> miLista = lista[:]
+nuevasFrutas = frutas.copy()
+#nuevasFrutas = list(frutas)
+#nuevasFrutas = frutas[:]
+print("--------------")
+
+#Hacer un Join de las listas
+
+juegos = ["Mario", "Zelda", "Pokemon"]
+numeros = [1,2,3]
+
+juegosNumeros = juegos + numeros
+print(juegosNumeros)
+print("--------------")
+
+#Otra forma
+for x in numeros:
+    juegos.append(x)
+print(juegos)
+print("--------------")
+
+#Otra forma
+juegos.extend(numeros)
+print(juegos)
+print("--------------")
